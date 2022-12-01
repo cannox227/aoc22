@@ -22,11 +22,8 @@ void add_elf_and_update_values(vector<int>& v, int& sum, int& max_val, int& max_
   sum = 0;
 }
 int main() {
-  // support vector
   vector<int> elf_calories;
-  // raw string read for each line
   string raw_line;
-  // input text file with the calories
   ifstream input_file("input.txt");
   int sum_of_single_elf_calories = 0;
   int max_value = 0;
@@ -41,15 +38,8 @@ int main() {
       //cout << ">>" << raw_line << endl;
     }
   }
-  // Close the file
   input_file.close();
 
-  /*
-     for(auto i : elf_calories){
-     cout << i << endl;
-     }
-     cout << endl;
-  */
   cout << "Max value found at " << max_index+1 << "=" << max_value << endl;
   cout << "calories["<<max_index<<"]="<<elf_calories[max_index]<<endl;
 
