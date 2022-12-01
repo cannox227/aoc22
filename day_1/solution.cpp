@@ -7,13 +7,9 @@
 #include <stdio.h>
 using namespace std;
 
-bool max(int a, int b){
-  return a >= b;
-}
-
 void add_elf_and_update_values(vector<int>& v, int& sum, int& max_val, int& max_index, int& current_index){
   v.push_back(sum);
-  if(max(sum, max_val)){
+  if(sum >= max_val){
     max_val = sum;
     max_index = current_index; 
   }
